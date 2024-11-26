@@ -1,10 +1,12 @@
 import logo from './logo.svg';
 //import './extra.css';
+import Header from './controllers/iraheader.js';  
+
 
 function App() {
   return (
-    <div className="text-center m-10 bg-red-500 h-100">
-     IRA SPORTSWEAR
+    <div className="text-center rounded-lg h-100">
+     <Header />
     </div>
   );
 }
