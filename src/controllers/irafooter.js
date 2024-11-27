@@ -143,7 +143,7 @@ export default function Footer() {
             </span>
             <div className="flex mt-4 sm:justify-center sm:mt-0">
               <a
-                href="#"
+                href="https://www.facebook.com/share/19c2ZcuHrs/"
                 className="text-gray-500 hover:text-gray-900 dark:hover:text-white"
               >
                 <svg
@@ -162,7 +162,7 @@ export default function Footer() {
                 <span className="sr-only">Facebook page</span>
               </a>
               <a
-                href="#"
+                href="https://www.linkedin.com/company/irasportwear"
                 className="text-gray-500 hover:text-gray-900 dark:hover:text-white ms-5"
               >
                 <svg
@@ -185,7 +185,7 @@ export default function Footer() {
                 <span className="sr-only">Linkedin Page</span>
               </a>
               <a
-                href="#"
+                href="https://www.instagram.com/ira_sportswear?igsh=MTc1OXdqcjk4bDl1dg=="
                 className="text-gray-500 hover:text-gray-900 dark:hover:text-white ms-5"
               >
                 <svg
