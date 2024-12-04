@@ -33,7 +33,7 @@ function App() {
       <GetReady />
     </div>
 
-    <div className="bg-cover">
+    <div className="text-center bg-gray-800 h-100 border-spacing-1 border-l-current">
       <Sports />
     </div>
 

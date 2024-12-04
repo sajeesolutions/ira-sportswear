@@ -57,14 +57,14 @@ const AutoScrollCards = () => {
     }, []);
   
     return (
-      <div className="bg-gray-50 py-12 px-6">
+      <div className="bg-gray-800 py-12 px-6 mb-20 pb-20 mx-auto container content-center">
          <div className="text-center content-center">
-            <h1 class="font-bold text-iraprimary text-center mx-auto w-full text-2xl lg:max-w-3xl lg:text-5xl">
+            <h1 class="font-bold text-white text-center mx-auto w-full text-2xl lg:max-w-3xl lg:text-5xl">
                 Sports
             </h1>
-            <p className="text-iraprimaryb m-1 p-1">IRS Sportswear's custom sports gear enhances performance, ensures comfort and style, and fosters team unity across various athletic disciplines.</p>
+            <p className="text-white m-1 p-1">IRS Sportswear's custom sports gear enhances performance, ensures comfort and style, and fosters team unity across various athletic disciplines.</p>
         </div>
-        <div className="max-w-7xl mx-auto">
+        <div className="max-w-8xl mx-auto">
           <div className="flex justify-between items-center mb-6">
             <h2 className="text-2xl font-bold text-gray-900"></h2>
             <a href="#" className="text-blue-500 hover:underline">
@@ -85,7 +85,7 @@ const AutoScrollCards = () => {
                 <img
                   src={category.image}
                   alt={category.name}
-                  className="w-40 h-40 object-cover bg-cover mb-4"
+                  className="w-52 h-52 object-cover bg-cover mb-4"
                 />
                 <h3 className="text-lg font-semibold text-gray-800">{category.name}</h3>
               </div>

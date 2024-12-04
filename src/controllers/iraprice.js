@@ -1,88 +1,102 @@
 import React, { useState } from "react";
+import Collor from '../assests/collarsection1.png';
 
-const TabsCustomAnimation = () => {
-  const [activeTab, setActiveTab] = useState("html");
+const TabbedLayout = () => {
+  const [activeTab, setActiveTab] = useState("Playing shirts");
+  
+  const [hover, setHover] = useState(false);
 
   const tabs = [
-    {
-      label: "Playing Shirts",
-      value: "Playing Shirts",
-      
-    },
-    {
-      label: "Trouser",
-      value: "Trouser",
-      
-    },
-    {
-      label: "Caps",
-      value: "Caps",
-      
-    },
-    {
-      label: "Hats",
-      value: "Hats",
-     
-    },
-    {
-      label: "Training T-Shirts",
-      value: "Training T-Shirts",
-      
-    },
-    {
-      label: "Cricket Whites",
-      value: "Cricket Whites",
-      
-    },
-    {
-      label: "Travel Jacket",
-      value: "Travel Jacket",
-      
-    },
+    { name: "Playing shirts", content: "Product Addon images" },
+    { name: "Trousers", content: "Product Addon images" },
+    { name: "Caps", content: "Product Addon images" },
+    { name: "Hats", content: "Product Addon images" },
+    { name: "Training T-Shirts", content: "Product Addon images" },
+    { name: "Cricket Whites", content: "Product Addon images" },
+    { name: "Travel Jacket", content: "Product Addon images" },
   ];
 
   return (
-    <div className="content-cente w-full h-100 mx-auto">
-        <h1 class="m-2 p-2 ease-out text-center font-bold leading-snug tracking-tight text-iraprimaryb bg-gradient-to-tr from-slate-800 to-slate-500 bg-clip-text mx-auto w-full text-2xl lg:max-w-3xl lg:text-5xl">
-          Price Estimator
-        </h1>
-      {/* Tabs Header */}
-      <div className="flex font-extralight text-justify text-7xl ml-10 mr-10 mt-4 mb-4 space-x-4 border-b border-gray-700">
-        {tabs.map((tab) => (
-          <button
-            key={tab.value}
-            onClick={() => setActiveTab(tab.value)}
-            className={`px-4 py-2 text-3xl font-medium transition-colors duration-500 ${
-              activeTab === tab.value
-                ? "text-blue-600 border-b-2 border-blue-600"
-                : "text-gray-500 hover:text-gray-800"
-            }`}
-          >
-            {tab.label}
-          </button>
-        ))}
-      </div>
+    <div className="container mx-auto">
+     
+        <h1
+        className={`text-4xl font-roboto mt-20 overflow-hidden text-iraprimaryb text-center font-bold transition-all duration-500 ease-in transform ${
+          hover ? "text-blue-500 scale-110 opacity-100" : "scale-100 opacity-80"
+        }`}
+        onMouseEnter={() => setHover(true)}
+        onMouseLeave={() => setHover(false)}
+      >
+        Price Estimator
+      </h1>
+      <div className="flex max-w-7xl mb-24 mx-auto mt-10 bg-white shadow-lg rounded-lg overflow-hidden">
+        {/* Left Sidebar */}
+        <div className="w-1/4 bg-gray-100 p-6">
+          <ul>
+            {tabs.map((tab) => (
+              <li
+                key={tab.name}
+                onClick={() => setActiveTab(tab.name)}
+                className={`cursor-pointer px-4 py-3 text-gray-700 rounded-md mb-2 ${
+                  activeTab === tab.name
+                    ? "bg-white font-semibold border-l-4 border-blue-500"
+                    : "hover:bg-gray-200"
+                }`}
+              >
+                {tab.name}
+              </li>
+            ))}
+          </ul>
+        </div>
 
-      {/* Tabs Content */}
-      <div className="p-40 h-100">
-        {tabs.map((tab) =>
-          activeTab === tab.value ? (
-            <div
-              key={tab.value}
-              className="transition-all duration-300 transform"
-            >
-              <p className="text-gray-700">{tab.content}
-              <div className="grid grid-cols-2 gap-4 p-4 h-100">
-                <div className="bg-gray-100 text-white p-4 rounded">{tab.Pictures}</div>
-                <div style={{height: '400px'}} className="bg-white text-white p-4 rounded">{tab.elements}</div>
-              </div>
-              </p>
-            </div>
-          ) : null
-        )}
+        {/* Right Content */}
+        <div className="w-2/4 p-6">
+          <h1 className="text-2xl font-bold mb-4">{activeTab}</h1>
+          <p className="text-gray-600">{tabs.find((tab) => tab.name === activeTab)?.content}</p>
+
+          {/* Example Numbered List */}
+          {activeTab === "Playing shirts" && (
+            <ul className="mt-4 space-y-2">
+              <li className="flex items-center">
+                <img
+                    src={Collor}
+                    alt="playing shirts"
+                    className="w-100 h-100 object-cover bg-cover mb-4"
+                  />
+              </li>
+            </ul>
+          )}
+        </div>
+        <div className="w-1/4 p-6">
+          <h1 className="text-2xl font-bold mb-4">{activeTab}</h1>
+          <p className="text-gray-600">{tabs.find((tab) => tab.name === activeTab)?.content}</p>
+
+          {/* Example Numbered List */}
+          {activeTab !== "" && (
+            <ul className="mt-4 space-y-2">
+              <li className="flex items-center">
+                <span className="w-8 h-8 flex items-center justify-center bg-blue-500 text-white rounded-full mr-4">
+                  1
+                </span>
+                Price Var1
+              </li>
+              <li className="flex items-center">
+                <span className="w-8 h-8 flex items-center justify-center bg-blue-500 text-white rounded-full mr-4">
+                  2
+                </span>
+                Price Var2
+              </li>
+              <li className="flex items-center">
+                <span className="w-8 h-8 flex items-center justify-center bg-blue-500 text-white rounded-full mr-4">
+                  3
+                </span>
+                Price Var3
+              </li>
+            </ul>
+          )}
+        </div>
       </div>
     </div>
   );
 };
 
-export default TabsCustomAnimation;
+export default TabbedLayout;
