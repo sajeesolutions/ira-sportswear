@@ -13,6 +13,7 @@ import Testimonials3  from './controllers/ira-testimnoials3.js';
 import Faqsection from './controllers/ira-faq.js';
 import Faqsection2 from './controllers/ira-faq2.js';
 import PriceEstimator from './controllers/priceestimator.js';
+import Latestevents from './controllers/latestevents.js';
 
 function App() {
   return (
@@ -45,9 +46,12 @@ function App() {
     <div className="w-full text-center rounded-lg h-100">
       <Faqsection />
     </div>
-
      
-    <div className="text-center rounded-lg h-100 border-t-iraprimary">
+    <div className="w-full text-center rounded-lg h-100">
+      <Latestevents />
+    </div> 
+     
+    <div className="text-center rounded-lg h-100 border-spacing-1 border-t-iraprimary">
       <Footer />
     </div>  
     </>

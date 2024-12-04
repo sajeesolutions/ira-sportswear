@@ -68,7 +68,7 @@ const AutoScrollCards = () => {
           <div className="flex justify-between items-center mb-6">
             <h2 className="text-2xl font-bold text-gray-900"></h2>
             <a href="#" className="text-blue-500 hover:underline">
-              Browse all categories →
+              Browse all Sports →
             </a>
           </div>
           <div
