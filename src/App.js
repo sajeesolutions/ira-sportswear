@@ -3,7 +3,7 @@ import ContactUs from './views/contactpage.js';
 import Footer from './controllers/irafooter.js';
 import HeroSection from './controllers/irahero.js';
 import WhyChooseUs from './controllers/wcu.js';
-//import Pricesira from './controllers/iraprice.js';
+import Pricesira from './controllers/iraprice.js';
 //import ImageScroller from './controllers/iraimagescroll.js';
 import GetReady from './controllers/getready.js';
 import Sports from './controllers/irasports.js';
@@ -37,16 +37,18 @@ function App() {
       <Sports />
     </div>
 
-    <div className="bg-cover py-12 px-6">
-      <Testimonials />
+    <div className='bg-transparent bg-cover'>
+      <Pricesira />
     </div>
 
-   
-
-    <div className="w-full text-center rounded-lg h-100">
+    <div className="w-full text-center">
       <Faqsection />
     </div>
-     
+    
+    <div className="bg-cover py-12 px-6">
+      <Testimonials3 />
+    </div>
+
     <div className="w-full text-center rounded-lg h-100">
       <Latestevents />
     </div> 

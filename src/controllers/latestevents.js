@@ -2,7 +2,7 @@ import gulf from '../assests/gulf.png';
 export default function Example() {
     return (
       <div className="bg-white">
-        <div className="mx-auto max-w-full py-24 sm:px-0 sm:py-32 lg:px-8">
+        <div className="mx-auto max-w-full py-12 sm:px-0 sm:py-32 lg:px-8">
           <div className="relative isolate overflow-hidden bg-gray-900 px-2 pt-16 shadow-2xl sm:rounded-3xl sm:px-16 md:pt-24 lg:flex lg:gap-x-20 lg:px-24 lg:pt-0">
             <svg
               viewBox="0 0 1024 1024"
