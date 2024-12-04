@@ -36,33 +36,16 @@ function App() {
       <Sports />
     </div>
 
-    <div className="bg-cover">
+    <div className="bg-cover py-12 px-6">
       <Testimonials />
     </div>
 
-    <div className="bg-cover">
-      <Testimonials2 />
-    </div>
-
-    <div className="bg-cover">
-      <Testimonials3 />
-    </div>
+   
 
     <div className="w-full text-center rounded-lg h-100">
       <Faqsection />
     </div>
 
-    <div className="w-full text-center rounded-lg h-100">
-      <Faqsection2 />
-    </div>
-
-    <div className="w-full text-center rounded-lg h-100">
-     
-    </div>
-
-    <div className="text-center rounded-lg h-100">
-      
-    </div>
      
     <div className="text-center rounded-lg h-100 border-t-iraprimary">
       <Footer />
