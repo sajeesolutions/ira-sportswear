@@ -52,19 +52,16 @@ function App() {
       <Faqsection />
     </div>
 
-
     <div className="w-full text-center rounded-lg h-100">
       <Faqsection2 />
     </div>
 
-
     <div className="w-full text-center rounded-lg h-100">
-      <PriceEstimator />
+     
     </div>
 
-
     <div className="text-center rounded-lg h-100">
-      <ContactUs />
+      
     </div>
      
     <div className="text-center rounded-lg h-100 border-t-iraprimary">
