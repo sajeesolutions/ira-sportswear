@@ -240,7 +240,7 @@ export default function Example() {
                   {navigation.categories.map((category) => (
                     <Tab
                       key={category.name}
-                      className="flex-1 whitespace-nowrap border-b-2 border-transparent px-1 py-4 text-base font-semibold text-gray-900 data-[selected]:border-indigo-600 data-[selected]:text-indigo-600"
+                      className="flex-1 whitespace-nowrap border-b-2 border-transparent px-1 py-4 text-base font-bold text-gray-900 data-[selected]:text-iraprimaryb"
                     >
                       {category.name}
                     </Tab>
@@ -255,7 +255,7 @@ export default function Example() {
                     </div>
                     {category.sections.map((section) => (
                       <div key={section.name}>
-                        <p id={`${category.id}-${section.id}-heading-mobile`} className="font-semibold text-gray-900">
+                        <p id={`${category.id}-${section.id}-heading-mobile`} className="font-bold text-gray-900">
                           {section.name}
                         </p>
                         <ul
@@ -312,13 +312,17 @@ export default function Example() {
       </Dialog>
 
       <header className="relative bg-white">
-        <p className="flex h-10 items-center justify-center bg-red-500 px-4 text-sm font-semibold text-white sm:px-6 lg:px-8">
+        <p className="flex h-6 w-full items-center justify-center bg-opacity-2 bg-iraprimary px-4 text-sm font-semibold text-white ease-out sm:px-6 lg:px-8">
           Contact Our Customer Support for any questions or concerns +1 847 624 2660
         </p>
-
-        <nav aria-label="Top" className="mx-auto items-center justify-center max-w-full px-4 sm:px-6 lg:px-8">
+        <p className="flex h-10 justify-end px-4 text-sm font-semibold sm:px-6 lg:px-8">
+          <a href="" className="flex items-center text-sm font-semibold text-gray-700 hover:text-gray-800 m-2 p-2">Size Guide</a>
+          <a href="" className="flex items-center text-sm font-semibold text-gray-700 hover:text-gray-800 m-2 p-2">Contact Us</a>
+          <a href="" className="flex items-center text-sm font-semibold text-gray-700 hover:text-gray-800 m-2 p-2">FAQ</a>
+        </p>
+        <nav aria-label="Top" className="mx-auto items-end max-w-full px-4 sm:px-6 lg:px-8 content-center">
           <div className="border-b border-gray-200">
-            <div className="flex h-16 items-center">
+            <div className="flex h-22 items-center">
               <button
                 type="button"
                 onClick={() => setOpen(true)}
@@ -336,19 +340,22 @@ export default function Example() {
                   <img
                     alt=""
                     src={IRA_Logo}
-                    className="h-8 w-auto"
+                    className="h-24 w-auto"
                   />
                 </a>
               </div>
 
-              {/* Flyout menus */}
-              <PopoverGroup className="hidden lg:ml-8 lg:block lg:self-stretch">
-                <div className="flex h-full space-x-8">
+              
+
+              <div className="ml-auto flex items-center">
+                {/* Flyout menus */}
+              <PopoverGroup className="hidden lg:ml-20 lg:block lg:self-stretch">
+                <div className="flex h-full right-0 justify-center items-center space-x-8 mr-14">
                 {navigation.pages.map((page) => (
                     <a
                       key={page.name}
                       href={page.href}
-                      className="flex items-center text-sm font-semibold text-gray-700 hover:text-gray-800"
+                      className="flex items-center text-sm font-bold text-gray-800 hover:text-gray-900"
                     >
                       {page.name}
                     </a>
@@ -356,14 +363,14 @@ export default function Example() {
                   {navigation.categories.map((category) => (
                     <Popover key={category.name} className="flex">
                       <div className="relative flex">
-                        <PopoverButton className="relative z-10 -mb-px flex items-center border-b-2 border-transparent pt-px text-sm font-semibold text-gray-700 transition-colors duration-200 ease-out hover:text-gray-800 data-[open]:border-indigo-600 data-[open]:text-indigo-600">
+                        <PopoverButton className="relative z-10 -mb-px flex items-center border-b-2 border-transparent pt-px text-sm font-bold text-gray-800 transition-all duration-400 ease-linear hover:text-gray-900 data-[open]:border-indigo-600 data-[open]:text-indigo-600">
                           {category.name}
                         </PopoverButton>
                       </div>
 
                       <PopoverPanel
                         transition
-                        className="absolute inset-x-0 top-full text-sm text-gray-500 transition data-[closed]:opacity-0 data-[enter]:duration-200 data-[leave]:duration-150 data-[enter]:ease-out data-[leave]:ease-in"
+                        className="absolute z-index:50 z-50 inset-x-0 top-full text-sm text-gray-800 transition data-[closed]:opacity-0 data-[enter]:duration-200 data-[leave]:duration-150 data-[enter]:ease-out data-[leave]:ease-in"
                       >
                         {/* Presentational element used to render the bottom shadow, if we put the shadow on the actual panel it pokes out the top, so we use this shorter element to hide the top of the shadow */}
                         <div aria-hidden="true" className="absolute inset-0 top-1/2 bg-white shadow" />
@@ -405,7 +412,7 @@ export default function Example() {
                     <a
                       key={page2.name}
                       href={page2.href}
-                      className="flex items-center text-sm font-semibold text-gray-700 hover:text-gray-800"
+                      className="flex items-center text-sm font-bold text-gray-800 hover:text-gray-900"
                     >
                       {page2.name}
                     </a>
@@ -413,48 +420,14 @@ export default function Example() {
                 </div>
               </PopoverGroup>
 
-              <div className="ml-auto flex items-center">
-                <div className="hidden lg:flex lg:flex-1 lg:items-center lg:justify-end lg:space-x-6">
-                  <a href="#" className="text-sm font-semibold text-gray-700 hover:text-gray-800">
-                    Sign in
-                  </a>
-                 
-                  <a href="#" className="text-sm font-semibold text-gray-700 hover:text-gray-800">
-                    .
+                <div className="hidden lg:flex lg:flex-1 lg:items-center lg:justify-end lg:space-x-8 mr-16">
+                  <a href="#" className="text-sm font-semibold bg-iraprimaryb m-2 p-2 rounded-lg hover:text-white-800 text-white">
+                    Sign up
                   </a>
                 </div>
 
-                <div className="hidden lg:ml-8 lg:flex">
-                  <a href="#" className="flex items-center text-gray-700 hover:text-gray-800">
-                    <img
-                      alt=""
-                      src="https://tailwindui.com/plus/img/flags/flag-canada.svg"
-                      className="block h-auto w-5 shrink-0"
-                    />
-                    <span className="ml-3 block text-sm font-semibold">USD</span>
-                    <span className="sr-only">, change currency</span>
-                  </a>
-                </div>
-
-                {/* Search */}
-                <div className="flex lg:ml-6">
-                  <a href="#" className="p-2 text-gray-400 hover:text-gray-500">
-                    <span className="sr-only">Search</span>
-                    <MagnifyingGlassIcon aria-hidden="true" className="size-6" />
-                  </a>
-                </div>
-
-                {/* Cart */}
-                <div className="ml-4 flow-root lg:ml-6">
-                  <a href="#" className="group -m-2 flex items-center p-2">
-                    <ShoppingBagIcon
-                      aria-hidden="true"
-                      className="size-6 shrink-0 text-gray-400 group-hover:text-gray-500"
-                    />
-                    <span className="ml-2 text-sm font-semibold text-gray-700 group-hover:text-gray-800">0</span>
-                    <span className="sr-only">items in cart, view bag</span>
-                  </a>
-                </div>
+               
+                
               </div>
             </div>
           </div>
