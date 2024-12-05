@@ -339,7 +339,7 @@ export default function Example() {
       </Dialog>
 
       <header className="relative bg-white">
-        <p className="flex h-6 w-full items-center justify-center bg-opacity-2 bg-iraprimary px-4 text-sm font-semibold text-white ease-out sm:px-6 lg:px-8">
+        <p className="flex h-6 w-full items-center justify-center bg-opacity-2 bg-iraprimary px-4 text-sm font-normal text-white ease-out sm:px-6 lg:px-8" style={{backgroundColor: "#d9d9d9",color:"#000000",fontFamily: 'sans-serif'}} >
           Contact Our Customer Support for any questions or concerns +1 847 624 2660
         </p>
         <p className="flex h-8 justify-end px-4 text-sm font-semibold sm:px-6 lg:px-8">
@@ -367,8 +367,8 @@ export default function Example() {
                   <img
                     alt=""
                     src={IRA_Logo}
-                    className="h-20 -mt-10 ml-12 w-auto laptop:-mt-10"
-                  />
+                    className="h-20 -mt-10 ml-12 w-auto laptop:-mt-10" 
+                    />
                 </a>
               </div>
 
