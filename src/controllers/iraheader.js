@@ -341,25 +341,25 @@ export default function Example() {
       <header className="relative bg-white">
           <div className="bg-blue-600 text-white">
           <div className="container mx-auto flex justify-between items-center px-4 py-2">
-            <div className='font-iramontserrat'>
+            <div className='font-iraraleway'>
               Contact Our Customer Support for any Questions or Concerns +1 847 624 2660
             </div>
-            <div className="flex space-x-4 font-iramontserrat">
+            <div className="flex space-x-4 font-irapoppins">
             <a
                 href="#"
-                className="hover:text-gray-300 transition"
+                className="hover:text-gray-300 font-iraraleway transition"
               >
                 Size Guide
               </a>
               <a
                 href="#"
-                className="hover:text-gray-300 transition"
+                className="hover:text-gray-300 font-iraraleway transition"
               >
                 Contact Us
               </a>
               <a
                 href="#"
-                className="hover:text-gray-300 transition"
+                className="hover:text-gray-300 font-iraraleway transition"
               >
                 FAQ
               </a>
@@ -403,7 +403,7 @@ export default function Example() {
                   {navigation.categories.map((category) => (
                     <Popover key={category.name} className="flex">
                       <div className="relative flex">
-                        <PopoverButton className="relative z-10 -mb-px flex items-center border-b-2 border-transparent pt-px text-sm font-bold text-gray-800 transition-all duration-400 ease-linear hover:text-gray-900 data-[open]:border-indigo-600 data-[open]:text-indigo-600">
+                        <PopoverButton className="relative font-iralato text-xl z-10 -mb-px flex items-center border-b-2 border-transparent pt-px text-gray-800 transition-all duration-400 ease-linear hover:text-gray-900 data-[open]:border-indigo-600 data-[open]:text-indigo-600">
                           {category.name}
                         </PopoverButton>
                       </div>
@@ -452,7 +452,7 @@ export default function Example() {
                     <a
                       key={page2.name}
                       href={page2.href}
-                      className="flex items-center text-sm font-bold text-gray-800 hover:text-gray-900"
+                      className="flex items-center font-iralato text-xl text-gray-800 hover:text-gray-900"
                     >
                       {page2.name}
                     </a>
