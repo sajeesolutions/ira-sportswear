@@ -18,6 +18,9 @@ import {
 import { Bars3Icon, MagnifyingGlassIcon, ShoppingBagIcon, XMarkIcon } from '@heroicons/react/24/outline'
 
 const navigation = {
+  pages: [
+    { name: '', href: '#' },
+  ],
   categories: [
     {
       id: 'SPORTS',
@@ -95,17 +98,6 @@ const navigation = {
     {
       id: 'CorporateClothing',
       name: 'Corporate Clothing',
-      sections: [
-        {
-          id: '',
-          name: '',
-          items: [
-            { name: '', href: '#' },
-            { name: '', href: '#' },
-            { name: '', href: '#' },
-          ],
-        },
-      ],
     },
     {
       id: 'digitalsolutions',
@@ -259,7 +251,16 @@ export default function Example() {
               </button>
             </div>
 
-          
+            {/* Links */}
+            <div className="space-y-6 border-t border-gray-200 px-4 py-6">
+              {navigation.pages.map((page) => (
+                <div key={page.name} className="flow-root">
+                  <a href={page.href} className="-m-2 block p-2 font-semibold text-gray-900">
+                    {page.name}
+                  </a>
+                </div>
+              ))}
+            </div>
 
             <TabGroup className="mt-2">
               <div className="border-b border-gray-200">
@@ -378,7 +379,15 @@ export default function Example() {
                 {/* Flyout menus */}
               <PopoverGroup className="hidden lg:ml-20 lg:block lg:self-stretch">
                 <div className="flex h-full right-0 justify-center items-center space-x-8 mr-14">
-               
+                {navigation.pages.map((page) => (
+                    <a
+                      key={page.name}
+                      href={page.href}
+                      className="flex items-center text-sm font-bold text-gray-800 hover:text-gray-900"
+                    >
+                      {page.name.toUpperCase()}
+                    </a>
+                  ))}
                   {navigation.categories.map((category) => (
                     <Popover key={category.name} className="flex">
                       <div className="relative flex">
@@ -401,7 +410,7 @@ export default function Example() {
                               <div className="row-start-0 grid grid-cols-6 gap-x-8 gap-y-10 text-sm">
                                 {category.sections.map((section) => (
                                   <div key={section.name} >
-                                    <p id={`${section.name}-heading`} className="font-semibold text-left border-b-2 text-gray-900">
+                                    <p id={`${section.name}-heading`} className="font-semibold  text-gray-900">
                                       {section.name.toUpperCase()}
                                     </p>
                                     <ul
