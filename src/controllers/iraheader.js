@@ -341,10 +341,10 @@ export default function Example() {
       <header className="relative bg-white">
           <div className="bg-blue-600 text-white">
           <div className="container mx-auto flex justify-between items-center px-4 py-2">
-            <div className='font-iraraleway'>
+            <div className='font-iraraleway text-sm'>
               Contact Our Customer Support for any Questions or Concerns +1 847 624 2660
             </div>
-            <div className="flex space-x-4 font-irapoppins">
+            <div className="flex text-sm space-x-4 font-irapoppins">
             <a
                 href="#"
                 className="hover:text-gray-300 font-iraraleway transition"
