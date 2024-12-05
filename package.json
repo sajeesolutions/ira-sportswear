@@ -2,10 +2,14 @@
   "name": "ira-sportswear",
   "version": "0.1.0",
   "private": true,
-  
   "dependencies": {
     "18": "0.0.0",
     "@craco/craco": "^7.1.0",
+    "@fontsource/lato": "^5.1.0",
+    "@fontsource/montserrat": "^5.1.0",
+    "@fontsource/oswald": "^5.1.0",
+    "@fontsource/poppins": "^5.1.0",
+    "@fontsource/raleway": "^5.1.0",
     "@headlessui/react": "^2.2.0",
     "@heroicons/react": "^2.2.0",
     "@hookform/resolvers": "^3.9.1",

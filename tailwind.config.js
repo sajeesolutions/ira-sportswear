@@ -23,6 +23,11 @@ module.exports = {
       {
         irahelvetica: ['Helvetica', 'Arial', 'sans-serif'], // Add Helvetica with fallbacks
         roboto : ['Roboto', 'Arial', 'sans-serif'],
+        iramontserrat: ["Montserrat", "sans-serif"],
+        irapoppins: ["Poppins", "sans-serif"],
+        iraoswald: ["Oswald", "sans-serif"],
+        iralato: ["Lato", "sans-serif"],
+        iraraleway: ["Raleway", "sans-serif"],
       },
       screens: {
         'laptop': '1488px', // Define a custom breakpoint for 1488px

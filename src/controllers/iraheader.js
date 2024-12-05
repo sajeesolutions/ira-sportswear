@@ -21,7 +21,7 @@ const navigation = {
   categories: [
     {
       id: 'SPORTS',
-      name: 'SPORTS',
+      name: 'Sports',
        /* featured: [
         {
           name: 'New Arrivals',
@@ -339,17 +339,38 @@ export default function Example() {
       </Dialog>
 
       <header className="relative bg-white">
-        <p className="flex h-10 w-full items-center justify-center bg-opacity-2 bg-iraprimary px-4 text-sm font-normal text-white ease-out sm:px-6 lg:px-8" style={{backgroundColor: "#d9d9d9",color:"#000000",fontFamily: 'sans-serif'}} >
-          Contact Our Customer Support for any questions or concerns +1 847 624 2660
-        </p>
-        <p className="flex h-8 justify-end px-4 text-sm font-semibold sm:px-6 lg:px-8">
-          <a href="" className="flex text-xs text-gray-700 hover:text-gray-800 m-1 p-1">Size Guide</a>
-          <a href="" className="flex text-xs text-gray-700 hover:text-gray-800 m-1 p-1">Contact Us</a>
-          <a href="" className="flex text-xs text-gray-700 hover:text-gray-800 m-1 p-1">FAQ</a>
-        </p>
+          <div className="bg-blue-600 text-white">
+          <div className="container mx-auto flex justify-between items-center px-4 py-2">
+            <div className='font-iramontserrat'>
+              Contact Our Customer Support for any Questions or Concerns +1 847 624 2660
+            </div>
+            <div className="flex space-x-4 font-iramontserrat">
+            <a
+                href="#"
+                className="hover:text-gray-300 transition"
+              >
+                Size Guide
+              </a>
+              <a
+                href="#"
+                className="hover:text-gray-300 transition"
+              >
+                Contact Us
+              </a>
+              <a
+                href="#"
+                className="hover:text-gray-300 transition"
+              >
+                FAQ
+              </a>
+            
+            </div>
+          </div>
+          </div>
         <nav aria-label="Top" className="mx-auto items-end max-w-full px-4 sm:px-6 lg:px-8 content-center">
-          <div className="border-b border-gray-200">
-            <div className="flex h-22 items-center">
+          <div className="border-b mx-auto border-gray-200">
+            <div className="flex h-36 items-baseline">
+
               <button
                 type="button"
                 onClick={() => setOpen(true)}
@@ -361,29 +382,29 @@ export default function Example() {
               </button>
 
               {/* Logo */}
-              <div className="ml-4 relative flex h-8">
+              <div className="mt-16 mb-16 mx-auto relative h-8">
                 <a href="#">
                   <span className="sr-only">IRA Sportswear</span>
                   <img
                     alt=""
                     src={IRA_Logo}
-                    className="h-20 -mt-10 ml-12 w-auto laptop:-mt-10" 
+                    className="h-24 mt-24 mb-24 ml-0 w-auto laptop:-mt-10" 
                     />
                 </a>
               </div>
 
               
 
-              <div className="hidden laptop:flex ml-auto h-8 m-2 p-0 flex gap-x-8 gap-y-10 items-center">
+              <div className="hidden laptop:flex mx-auto h-28 m-2 p-0 gap-x-8 gap-y-10 items-center">
                 {/* Flyout menus */}
               <PopoverGroup className="hidden lg:ml-20 lg:block lg:self-stretch">
-                <div className="flex h-full right-0 justify-center items-center space-x-8 mr-14">
+                <div className="flex h-full items-center space-x-6">
                
                   {navigation.categories.map((category) => (
                     <Popover key={category.name} className="flex">
                       <div className="relative flex">
                         <PopoverButton className="relative z-10 -mb-px flex items-center border-b-2 border-transparent pt-px text-sm font-bold text-gray-800 transition-all duration-400 ease-linear hover:text-gray-900 data-[open]:border-indigo-600 data-[open]:text-indigo-600">
-                          {category.name.toUpperCase()}
+                          {category.name}
                         </PopoverButton>
                       </div>
 
@@ -431,16 +452,16 @@ export default function Example() {
                     <a
                       key={page2.name}
                       href={page2.href}
-                      className="flex items-center text-sm capitalize font-bold text-gray-800 hover:text-gray-900"
+                      className="flex items-center text-sm font-bold text-gray-800 hover:text-gray-900"
                     >
-                      {page2.name.toUpperCase()}
+                      {page2.name}
                     </a>
                   ))}
                 </div>
               </PopoverGroup>
 
                 <div className="hidden lg:flex lg:flex-1 flex-wrap lg:items-center lg:justify-end lg:space-x-8 mr-16">
-                  <a href="#" className="text-sm w-fit font-semibold bg-iraprimaryb m-2 p-2 rounded-lg hover:text-white-800 text-white">
+                  <a href="#" className="text-sm w-fit font-semibold bg-iraprimaryb m-2 p-2 pl-5 pr-5 rounded-lg hover:text-white-800 text-white">
                     Sign up
                   </a>
                 </div>
