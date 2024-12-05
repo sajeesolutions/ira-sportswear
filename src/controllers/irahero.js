@@ -28,7 +28,7 @@ function HeroSection()
       </section></div>
       ) : (
         // Desktop/tablet code here
-        <div> <section className="relative w-full h-screen sm:h-[500px] md:h-[600px] lg:h-[700px] bg-gray-900 overflow-hidden">
+        <div> <section className="relative w-full h-screen sm:h-[500px] md:h-[600px] lg:h-[700px] bg-gray-900">
         <div className="absolute inset-0 z-0 bg-cover bg-center bg-opacity-50" style={{ backgroundImage: `url(${iraStadiumImage})` }}>
           <div className="absolute inset-0 bg-black opacity-40"></div>
         </div>

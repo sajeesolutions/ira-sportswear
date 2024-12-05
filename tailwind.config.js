@@ -24,7 +24,9 @@ module.exports = {
         irahelvetica: ['Helvetica', 'Arial', 'sans-serif'], // Add Helvetica with fallbacks
         roboto : ['Roboto', 'Arial', 'sans-serif'],
       },
-     
+      screens: {
+        'laptop': '1488px', // Define a custom breakpoint for 1488px
+      },
       keyframes: {
         scroll: {
           '0%': { transform: 'translateX(0)' },

@@ -1,6 +1,6 @@
 'use client'
-import IRA_Logo from '../assests/IRA_Logos.svg';
-import { Fragment, useState } from 'react'
+import IRA_Logo from '../assests/IRA Logos.png';
+import { Fragment, useState , useEffect } from 'react'
 import {
   Dialog,
   DialogBackdrop,
@@ -19,7 +19,7 @@ import { Bars3Icon, MagnifyingGlassIcon, ShoppingBagIcon, XMarkIcon } from '@her
 
 const navigation = {
   pages: [
-    { name: 'Sports', href: '#' },
+    { name: 'SPORTS', href: '#' },
   ],
   categories: [
     {
@@ -197,10 +197,34 @@ const navigation = {
 export default function Example() {
   const [open, setOpen] = useState(false)
 
+  const [isMobile, setIsMobile] = useState(false);
+
+  // Handle screen size changes
+  useEffect(() => {
+    const handleResize = () => {
+      if (window.innerWidth <= 1488) {
+        setIsMobile(true); // Mobile view
+       // setOpen(true); // Open dialog when in mobile view
+      } else {
+        setIsMobile(false); // Larger view
+      //  setOpen(false); // Close dialog when screen is wide enough
+      }
+    };
+
+    window.addEventListener('resize', handleResize);
+    
+    // Initial check
+    handleResize();
+
+    // Cleanup listener on component unmount
+    return () => window.removeEventListener('resize', handleResize);
+  }, []);
+
+
   return (
     <div className="bg-white">
       {/* Mobile menu */}
-      <Dialog open={open} onClose={setOpen} className="relative z-40 lg:hidden">
+      <Dialog open={open} onClose={setOpen} className="relative z-40 laptop:hidden">
         <DialogBackdrop
           transition
           className="fixed inset-0 bg-black/25 transition-opacity duration-300 ease-linear data-[closed]:opacity-0"
@@ -315,10 +339,10 @@ export default function Example() {
         <p className="flex h-6 w-full items-center justify-center bg-opacity-2 bg-iraprimary px-4 text-sm font-semibold text-white ease-out sm:px-6 lg:px-8">
           Contact Our Customer Support for any questions or concerns +1 847 624 2660
         </p>
-        <p className="flex h-10 justify-end px-4 text-sm font-semibold sm:px-6 lg:px-8">
-          <a href="" className="flex items-center text-sm font-semibold text-gray-700 hover:text-gray-800 m-2 p-2">Size Guide</a>
-          <a href="" className="flex items-center text-sm font-semibold text-gray-700 hover:text-gray-800 m-2 p-2">Contact Us</a>
-          <a href="" className="flex items-center text-sm font-semibold text-gray-700 hover:text-gray-800 m-2 p-2">FAQ</a>
+        <p className="flex h-8 justify-end px-4 text-sm font-semibold sm:px-6 lg:px-8">
+          <a href="" className="flex text-xs text-gray-700 hover:text-gray-800 m-1 p-1">Size Guide</a>
+          <a href="" className="flex text-xs text-gray-700 hover:text-gray-800 m-1 p-1">Contact Us</a>
+          <a href="" className="flex text-xs text-gray-700 hover:text-gray-800 m-1 p-1">FAQ</a>
         </p>
         <nav aria-label="Top" className="mx-auto items-end max-w-full px-4 sm:px-6 lg:px-8 content-center">
           <div className="border-b border-gray-200">
@@ -326,7 +350,7 @@ export default function Example() {
               <button
                 type="button"
                 onClick={() => setOpen(true)}
-                className="relative rounded-md bg-white p-2 text-gray-400 lg:hidden"
+                className="relative rounded-md bg-white p-2 text-gray-400 laptop:hidden"
               >
                 <span className="absolute -inset-0.5" />
                 <span className="sr-only">Open menu</span>
@@ -334,20 +358,20 @@ export default function Example() {
               </button>
 
               {/* Logo */}
-              <div className="ml-4 flex lg:ml-0">
+              <div className="ml-4 relative flex h-8">
                 <a href="#">
                   <span className="sr-only">IRA Sportswear</span>
                   <img
                     alt=""
                     src={IRA_Logo}
-                    className="h-24 w-auto"
+                    className="h-20 -mt-10 ml-12 w-auto laptop:-mt-10"
                   />
                 </a>
               </div>
 
               
 
-              <div className="ml-auto flex items-center">
+              <div className="hidden laptop:flex ml-auto h-8 m-2 p-0 flex gap-x-8 gap-y-10 items-center">
                 {/* Flyout menus */}
               <PopoverGroup className="hidden lg:ml-20 lg:block lg:self-stretch">
                 <div className="flex h-full right-0 justify-center items-center space-x-8 mr-14">
@@ -357,14 +381,14 @@ export default function Example() {
                       href={page.href}
                       className="flex items-center text-sm font-bold text-gray-800 hover:text-gray-900"
                     >
-                      {page.name}
+                      {page.name.toUpperCase()}
                     </a>
                   ))}
                   {navigation.categories.map((category) => (
                     <Popover key={category.name} className="flex">
                       <div className="relative flex">
                         <PopoverButton className="relative z-10 -mb-px flex items-center border-b-2 border-transparent pt-px text-sm font-bold text-gray-800 transition-all duration-400 ease-linear hover:text-gray-900 data-[open]:border-indigo-600 data-[open]:text-indigo-600">
-                          {category.name}
+                          {category.name.toUpperCase()}
                         </PopoverButton>
                       </div>
 
@@ -379,11 +403,11 @@ export default function Example() {
                           <div className="mx-auto max-w-7xl px-8">
                             <div className="grid grid-cols-1 gap-x-8 gap-y-10 py-16">
                              
-                              <div className="row-start-1 grid grid-cols-5 gap-x-8 gap-y-10 text-sm">
+                              <div className="row-start-0 grid grid-cols-6 gap-x-8 gap-y-10 text-sm">
                                 {category.sections.map((section) => (
-                                  <div key={section.name}>
-                                    <p id={`${section.name}-heading`} className="font-semibold text-gray-900">
-                                      {section.name}
+                                  <div key={section.name} >
+                                    <p id={`${section.name}-heading`} className="font-semibold  text-gray-900">
+                                      {section.name.toUpperCase()}
                                     </p>
                                     <ul
                                       role="list"
@@ -412,16 +436,16 @@ export default function Example() {
                     <a
                       key={page2.name}
                       href={page2.href}
-                      className="flex items-center text-sm font-bold text-gray-800 hover:text-gray-900"
+                      className="flex items-center text-sm capitalize font-bold text-gray-800 hover:text-gray-900"
                     >
-                      {page2.name}
+                      {page2.name.toUpperCase()}
                     </a>
                   ))}
                 </div>
               </PopoverGroup>
 
-                <div className="hidden lg:flex lg:flex-1 lg:items-center lg:justify-end lg:space-x-8 mr-16">
-                  <a href="#" className="text-sm font-semibold bg-iraprimaryb m-2 p-2 rounded-lg hover:text-white-800 text-white">
+                <div className="hidden lg:flex lg:flex-1 flex-wrap lg:items-center lg:justify-end lg:space-x-8 mr-16">
+                  <a href="#" className="text-sm w-fit font-semibold bg-iraprimaryb m-2 p-2 rounded-lg hover:text-white-800 text-white">
                     Sign up
                   </a>
                 </div>
