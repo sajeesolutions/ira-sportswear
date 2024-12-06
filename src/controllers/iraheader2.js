@@ -374,7 +374,7 @@ export default function Example() {
                   <img
                     alt=""
                     src={IRA_Logo}
-                    className="h-24 mt-24 mb-24 ml-0 w-auto laptop:-mt-10" 
+                    className="h-24 mt-22 mb-22 ml-0 w-auto laptop:-mt-10" 
                     />
                 </a>
               </div>
