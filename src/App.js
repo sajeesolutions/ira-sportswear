@@ -1,61 +1,25 @@
-import Header from './controllers/iraheader.js';  
-import ContactUs from './views/contactpage.js';
-import Footer from './controllers/irafooter.js';
-import HeroSection from './controllers/irahero.js';
-import WhyChooseUs from './controllers/wcu.js';
-import Pricesira from './controllers/iraprice.js';
-//import ImageScroller from './controllers/iraimagescroll.js';
-import GetReady from './controllers/getready.js';
-import Sports from './controllers/irasports.js';
-import Testimonials  from './controllers/ira-testimnoials.js';
-import Testimonials2  from './controllers/ira-testimnoials2.js';
-import Testimonials3  from './controllers/ira-testimnoials3.js';
-import Faqsection from './controllers/ira-faq.js';
-import Faqsection2 from './controllers/ira-faq2.js';
-import PriceEstimator from './controllers/priceestimator.js';
-import Latestevents from './controllers/latestevents.js';
-
+import React from "react";
+import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
+import VERSION1 from "./controllers/theme1";
+import VERSION2 from "./controllers/theme2";
+import { Link } from "react-router-dom";
 function App() {
   return (
     <>
-    <div className="inset-0 text-center rounded-lg h-100">
-      <Header />
-    </div>
-    <div className="relative inset-0 bg-cover bg-center bg-opacity-50">
-      <HeroSection />
-    </div>
-  
-    <div className="text-center h-100 m-5 p-5 border-spacing-1 border-l-current">
-      <WhyChooseUs />
-    </div>
-
-    <div className="bg-cover">
-      <GetReady />
-    </div>
-
-    <div className="text-center bg-gray-800 h-100 border-spacing-1 border-l-current">
-      <Sports />
-    </div>
-
-    <div className='bg-transparent bg-cover'>
-      <Pricesira />
-    </div>
-
-    <div className="w-full text-center">
-      <Faqsection />
-    </div>
-    
-    <div className="bg-cover py-12 px-6">
-      <Testimonials3 />
-    </div>
-
-    <div className="w-full text-center rounded-lg h-100">
-      <Latestevents />
-    </div> 
+    <Router>
      
-    <div className="text-center rounded-lg h-100 border-spacing-1 border-t-iraprimary">
-      <Footer />
-    </div>  
+      <Routes>
+        {/* Main Pages */}
+        <Route path="/version1" element={<VERSION1 />} />
+        <Route path="/version2" element={<VERSION2 />} />
+      </Routes>
+
+      <div className="m-44">
+        <Link target="_blank" className="m-10 bg-gray-800 p-5 font-iraraleway shadow-custom-blue text-white  hover:text-iraprimary  hover:border-b-4 rounded-2xl hover:border-red-500 transition duration-200" to="/version1">Go to Version 1</Link>
+        <Link target="_blank" className="m-10 bg-gray-800 p-5 font-iraraleway shadow-custom-blue text-white hover:text-iraprimary hover:border-b-4 rounded-2xl hover:border-red-500 transition duration-200" to="/version2">Go to Version 2</Link>
+      </div>
+      
+    </Router>
     </>
   );
 }

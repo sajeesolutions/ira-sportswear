@@ -28,9 +28,16 @@ module.exports = {
         iraoswald: ["Oswald", "sans-serif"],
         iralato: ["Lato", "sans-serif"],
         iraraleway: ["Raleway", "sans-serif"],
+        iraplayfair: ["Playfair Display", "serif"],
+        iraopensans: ["Open Sans", "sans-serif"],
+        iraopen: ["Open Sans Condensed", "sans-serif"],
+        iraarial: ["Arial", "sans-serif"],
+        iraarialblack: ["Arial Black", "sans-serif"],
+        iravertical: ["Arial", "sans-serif"], // Add Arial with fallbacks
+        irabold: ["Arial Bold", "sans-serif"], // Add Arial Bold with fallbacks
       },
       screens: {
-        'laptop': '1488px', // Define a custom breakpoint for 1488px
+        'laptop': '780px', // Define a custom breakpoint for 1488px
       },
       keyframes: {
         scroll: {
