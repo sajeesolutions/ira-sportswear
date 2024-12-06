@@ -450,14 +450,6 @@ export default function Example() {
                   ))}
                 </div>
               </PopoverGroup>
-
-                <div className="hidden lg:flex lg:flex-1 flex-wrap lg:items-center lg:justify-end lg:space-x-8 mr-16">
-                  <a href="#" className="text-sm w-fit font-semibold bg-iraprimaryb m-2 p-2 pl-5 pr-5 rounded-lg hover:text-white-800 text-white">
-                    Sign up
-                  </a>
-                </div>
-
-               
                 
               </div>
             </div>
