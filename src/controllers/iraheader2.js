@@ -371,7 +371,7 @@ export default function Example() {
               <div className="mt-16 mb-16 mx-auto relative h-8">
                 <a href="#">
                   <span className="sr-only">IRA Sportswear</span>
-                  <img hidden
+                  <img
                     alt=""
                     src={IRA_Logo}
                     className="h-24 mt-24 mb-24 ml-0 w-auto laptop:-mt-10" 
