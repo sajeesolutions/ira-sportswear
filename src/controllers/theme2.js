@@ -10,7 +10,7 @@ function App() {
     <div className="relative inset-0 bg-cover bg-center bg-opacity-50">
      
     </div>
-  
+      <HeroSection />
     </>
   );
 }
