@@ -1,5 +1,6 @@
 import Header from './iraheader2.js';  
 import HeroSection from './irahero.js';
+import WCUaccordion from './WCUaccordion.js';
 
 function App() {
   return (
@@ -11,6 +12,7 @@ function App() {
      
     </div>
       <HeroSection />
+      <WCUaccordion />
     </>
   );
 }

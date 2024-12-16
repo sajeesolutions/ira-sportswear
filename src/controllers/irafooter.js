@@ -2,7 +2,7 @@
 /* eslint-disable no-unused-vars */
 /* eslint-disable react/no-unknown-property */
 import React from "react";
-import iraLogo from "../assests/IRA_Logos.svg";
+import iraLogo from "../assests/IRA Logos.png";
 
 export default function Footer() {
   return (
@@ -14,7 +14,7 @@ export default function Footer() {
               <a href="/" className="flex items-center">
                 <img
                   src={iraLogo}
-                  className="h-60 me-3"
+                  className="h-42 w-64 me-3"
                   alt="IRA-SportsWear Logo"
                 />
               </a>

@@ -14,6 +14,7 @@ import Faqsection2 from './ira-faq2.js';
 import PriceEstimator from './priceestimator.js';
 import Latestevents from './latestevents.js';
 
+
 function App() {
   return (
     <>
