@@ -13,7 +13,7 @@ import Faqsection from './ira-faq.js';
 import Faqsection2 from './ira-faq2.js';
 import PriceEstimator from './priceestimator.js';
 import Latestevents from './latestevents.js';
-import WCU from './wcuAccordion.js';
+
 
 function App() {
   return (
@@ -26,7 +26,6 @@ function App() {
     </div>
   
     <div className="text-center h-100 m-5 p-5 border-spacing-1 border-l-current">
-      <WCU />
       <WhyChooseUs />
     </div>
 

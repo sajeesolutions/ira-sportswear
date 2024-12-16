@@ -105,7 +105,7 @@ const WCUaccordion = () => {
               <div className="pl-4 mt-2">
                 <div className="flex flex-wrap gap-2 items-center">
                   <span className="bg-indigo-900 text-white text-sm me-2 px-2.5 py-0.5 rounded rubik">
-                    IRA
+                    We
                   </span>
                   <p className="text-sm inter">{feature.iraDescription}</p>
                 </div>
